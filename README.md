@@ -23,7 +23,7 @@ Before doing any distillation, you'll need to generate some expert trajectories 
 
 The following command will train 100 ConvNet models on PathMNIST(28x28) with ZCA whitening for 50 epochs each:
 ```
-cd mtt
+cd MTT
 python buffer.py --dataset=PathMNIST --model=ConvNet --train_epochs=50 --num_experts=100 --zca --buffer_path={path_to_buffer_storage} --data_path={path_to_dataset}
 ```
 
@@ -38,3 +38,8 @@ Noticed that the lr_lr might need to be adjusted to make sure the loss will not 
 
 ## Distillation with DC
 This is modified from: https://github.com/VICO-UoE/DatasetCondensation
+
+```
+cd DC
+python main.py  --dataset PathMNIST  --model ConvNet  --ipc 10
+```

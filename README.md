@@ -1,6 +1,6 @@
 # ImageDistillation
 
-This is the code repository for "Dataset Distillation in Medical Imaging: A Feasibility Study".
+This is the code repository for "Dataset Distillation in Medical Imaging: A Feasibility Study". Paper: https://arxiv.org/abs/2407.14429
 
 ## Dataset
 The dataset used here is from MedMNIST, which provides with medical images of 64x64, 128x128, and 224x224 for 2D, and 64x64x64 for 3D. Source: https://medmnist.com/.

@@ -30,8 +30,11 @@ python buffer.py --dataset=PathMNIST --model=ConvNet --train_epochs=50 --num_exp
 Note that experts need only be trained once and can be re-used for multiple distillation experiments.
 
 The following command will then use the buffers we just generated to distill PathMNIST(28x28) down to just 1 image per class:
+```
 python distill.py --dataset=PathMNIST --ipc=1 --syn_steps=20 --expert_epochs=3 --max_start_epoch=20 --zca --lr_img=1000 --lr_lr=1e-06 --lr_teacher=0.01 --buffer_path={path_to_buffer_storage} --data_path={path_to_dataset}
+```
 
 Noticed that the lr_lr might need to be adjusted to make sure the loss will not be negative.
 
-
+## Distillation with DC
+This is modified from: https://github.com/VICO-UoE/DatasetCondensation
